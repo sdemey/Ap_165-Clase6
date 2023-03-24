@@ -1,0 +1,28 @@
+h4 {
+    color: tomato;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#rosa-juete {
+    color: hotpink;
+    border: 4px doted salmon;
+}
+
+.h44 {
+    color: limegreen;
+font-size: 32px;
+}
+
+.borde {
+    border: solid 2px purple;
+}
+
+.ttl-menu{
+    color:darkblue;
+    font-size: 32px;
+    text-align: center;
+    border: 2px dotted salmon;
+    padding: 10px ;
+    background-color: aquamarine;
+    margin-bottom: 0%;
+}
