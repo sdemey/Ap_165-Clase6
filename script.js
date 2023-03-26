@@ -1,58 +1,57 @@
-//funciones
-
-function sayHello (){
-
-};
-
-function twoSum (num1, num2){
-    if (typeof num1 === "number" && typeof num2 === "number")
-    {console.log (num1 + num2);} else {
-        console.error( "la funcion espera dos numeros")
-    };
-    return "la funcion espera dos numeros";
-    function twoSumConretorno (num1, num2){
-        if (typeof num1 === "number" && typeof num2 === "number")
-       return "el resultado es:" (num1 + num2);
-           return  "la funcion espera dos numeros";
-        };
-               
+function changeTitle (){
+   ttl4.innerText = "hemos cambiado";
+   ttl4.classList.add ("chetoTtl");
 }
-//let num1 = 56;
-//let num2 = 5;
-//sayHello();
-//twoSum("feliz", 56);
-//twoSum(5, 9)
-//twoSumConretorno(89,8);
-//console.log (twoSumConretorno (9, 8));
 
-//arreglos o vectores arrays
+function restorestyle(){
+ttl4.classList.remove ("chetoTtl");
+}
 
-let clientes =[];
-console.log (clientes);
-clientes[0]= "Rosario";
-clientes[1]= "Ramon";
-clientes [5]= "Pepito";
-console.log(clientes);
+function handleToggle( ){
+if(ttl4.classList.contains("chetoTtl")){
+    console.log("tiene");
+}else{
+    console.log("no tiene");
+}
+   }
+const para = document.querySelector ("p");
+const allPara = document.querySelectorAll ("p");
+const ttl4 = document.getElementById (`ttl`);
+const btn = document.getElementsByTagName ("button");
+const btnToggle = document.getElementById("btnToggle")
+btnToggle.addEventListener("click", handleToggle);
+btn[0].addEventListener("click", changeTitle);
+btn[1].addEventListener("click", restorestyle);
 
-clientes[clientes.length] = "Felipe";
-console.log(clientes);
+console.log ("primer parrafo", para);
+console.log ("todos" , allPara);
+allPara [2].innerText = "Ma que Loren"
 
-clientes.push("Felipe", "Roberto", "Carla");
-clientes.pop ();
-console.log(clientes);
-clientes.unshift ("Pedro");
-console.log(clientes);
-clientes.shift();
-console.log (clientes);
-
-
-console.log (clientes(0));
-console.log (clientes (1));
-console.log (clientes (2));
-console.log (clientes (3));
-console.log (clientes (4));
+//vamos a cambiar todos los parrafos con un bucle, utilizaremos la longitud del arreglo que contienen los parrafo para indicarle al bucle cuantas veces debe eterrar
+for (let i =0; i< allPara.length; i++) {
+    allPara [i].textContent = `párrafo número  ${i + 1}`;
+}
 
 
-for (let i =0; i < clientes.length; i++) {
-    console.log(clientes);
+let age = 50;
+let fName = "Marcelo";
+let sName = "Eduardo";
+let like = "programar y enseñar";
+
+console.log ( "Mi nombre es " + fName + "" + sName + "y me encanta" + like + "y tengo " + age + " años.");
+// string interpolation
+console.log (`Mi nombre es ${fName} me encanta ${like} y tengo ${age} años
+`); 
+
+
+
+//crear elementos en el DOM de acuerdo a datos que ingresen de una fuente externa (base de datos, API, etc.)
+
+const list = document.getElementById ("userList");
+
+const usersData = ["penelope61amor", "gaticaMonkey", "firulete","pedrito", "laJuli33" ]
+for (let i= 0; i < usersData.length; i++){
+const item = document.createElement("li");
+item.textContent = usersData [i];
+list.appendChild(item);
 }
